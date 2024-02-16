@@ -9,7 +9,7 @@ id = 21100109-b356-40bb-bcad-adbd37e6f3dd
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"27247429-bc5356e4-29bb-435e-80e7-c2c3f6fd0c4a","path":"sqlverifier_auto_4.1_4.2.json","metaData":{}}
+files[] = {"id":"27247429-b14ab8bb-7489-4fff-9f67-e62da416c128","path":"sqlverifier_auto_4.1_4.2.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
