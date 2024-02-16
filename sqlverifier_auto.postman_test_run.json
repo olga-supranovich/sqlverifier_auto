@@ -1,0 +1,784 @@
+{
+	"id": "72e7d7c4-73a5-47b9-a085-c6ea09fa3e13",
+	"name": "sqlverifier_auto",
+	"timestamp": "2024-02-11T12:16:47.880Z",
+	"collection_id": "27247429-f2a53311-1eaa-4ee7-975a-463b25ee0ed5",
+	"folder_id": 0,
+	"environment_id": "27247429-eff47692-7ad2-42e9-a146-d3bab653375d",
+	"totalPass": 50,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-02-11T12:16:43.654Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "8eb0c5b2-1384-4d09-afc6-7e989c010b29",
+			"name": "Register new user",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/register",
+			"time": 153,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "6d12a356-6beb-48ec-b010-f676fe466824",
+			"name": "Authenticate as new user",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 71,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Response status code is 500": true,
+				"Content-Type is application/problem+json": true,
+				"Status field is a non-negative integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				71
+			],
+			"allTests": [
+				{
+					"Response status code is 500": true,
+					"Content-Type is application/problem+json": true,
+					"Status field is a non-negative integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "ae9fd366-3c03-40e5-9aa3-aa1746db1e4a",
+			"name": "Authenticate as admin",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 375,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Token provided": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token provided": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				375
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Token provided": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "71fc03d1-eb35-4fcc-a475-c39585d632d3",
+			"name": "Get user's account info",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users/domingo_auto",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"User's id, login, email, activated status are correct": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User's id, login, email, activated status are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				185
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"User's id, login, email, activated status are correct": true
+				}
+			]
+		},
+		{
+			"id": "65720401-4a68-466d-958e-419a79c06876",
+			"name": "Update user",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users",
+			"time": 194,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"User's id, login, email, activated status are correct": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User's id, login, email, activated status are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				194
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"User's id, login, email, activated status are correct": true
+				}
+			]
+		},
+		{
+			"id": "554ebab9-4009-4fbd-b9db-c0d573b7f7e3",
+			"name": "Authenticate as new user",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 261,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Token provided": true,
+				"Response time is less than 200ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token provided": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Token provided": true,
+					"Response time is less than 200ms": false
+				}
+			]
+		},
+		{
+			"id": "5dbbf7b1-69b5-44e0-b373-c6cb68423c9c",
+			"name": "Get logged in new user's account",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/account",
+			"time": 179,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is in JSON format": true,
+				"User's id, login, email, activated status are correct": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User's id, login, email, activated status are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				179
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is in JSON format": true,
+					"User's id, login, email, activated status are correct": true
+				}
+			]
+		},
+		{
+			"id": "4686f3e4-f03c-47f0-8954-2c4ffbdc42b7",
+			"name": "Delete user",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users/domingo_auto",
+			"time": 186,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				186
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "92b46de1-326f-453a-8ae1-d6fb25067dd6",
+			"name": "Get user's account info  after deletion",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users/domingo_auto",
+			"time": 67,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response is in JSON format": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				67
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response is in JSON format": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "da2943ff-8d99-4986-a904-c1206a1c1327",
+			"name": "Authenticate as new user after deletion",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 254,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 401": true,
+				"Content-Type is application/problem+json": true,
+				"Status field is a non-negative integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Response status code is 401": true,
+					"Content-Type is application/problem+json": true,
+					"Status field is a non-negative integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "a939e7cb-72ff-4791-82a5-a9d1504af40a",
+			"name": "Register new user - empty username",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/register",
+			"time": 174,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true,
+				"Content-Type is application/problem+json": true,
+				"Response body should not be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should not be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				174
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true,
+					"Content-Type is application/problem+json": true,
+					"Response body should not be empty": true
+				}
+			]
+		},
+		{
+			"id": "44e56640-f5a9-4bd5-8d03-a465a3bf9ee2",
+			"name": "Register new user - empty password",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/register",
+			"time": 258,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true,
+				"Content-Type is application/problem+json": true,
+				"Response body should not be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should not be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true,
+					"Content-Type is application/problem+json": true,
+					"Response body should not be empty": true
+				}
+			]
+		},
+		{
+			"id": "cabd85a8-7338-4ce8-bee1-5592cb450239",
+			"name": "Register new user - empty email",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/register",
+			"time": 182,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true,
+				"Content-Type is application/problem+json": true,
+				"Response body should not be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should not be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				182
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true,
+					"Content-Type is application/problem+json": true,
+					"Response body should not be empty": true
+				}
+			]
+		},
+		{
+			"id": "022d1b92-b761-4efd-8645-f572913c6221",
+			"name": "Authenticate with invalid credentials",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 246,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 401": true,
+				"Content-Type is application/problem+json": true,
+				"Status field is a non-negative integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				246
+			],
+			"allTests": [
+				{
+					"Response status code is 401": true,
+					"Content-Type is application/problem+json": true,
+					"Status field is a non-negative integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "9aa846cb-0869-405e-921a-5d55e6f9a690",
+			"name": "Authenticate - no password",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 179,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true,
+				"Content-Type is application/problem+json": true,
+				"Status field is a non-negative integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				179
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true,
+					"Content-Type is application/problem+json": true,
+					"Status field is a non-negative integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "c471019b-d1dc-42da-850e-a03f9421eb69",
+			"name": "Authenticate  - no username",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 179,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true,
+				"Content-Type is application/problem+json": true,
+				"Status field is a non-negative integer": true,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/problem+json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status field is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				179
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true,
+					"Content-Type is application/problem+json": true,
+					"Status field is a non-negative integer": true,
+					"Message is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "3188516f-8631-4d8d-bc42-33f6eab00c4d",
+			"name": "Get admin's account  - no token",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users/admin_automation",
+			"time": 168,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Response status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "988a4d74-e326-4dfb-a484-1fe5e56a5f7c",
+			"name": "Get admin's account  - invalid token",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/admin/users/admin_automation",
+			"time": 58,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Response status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3369,
+	"collection": {
+		"requests": [
+			{
+				"id": "8eb0c5b2-1384-4d09-afc6-7e989c010b29",
+				"method": "POST"
+			},
+			{
+				"id": "6d12a356-6beb-48ec-b010-f676fe466824",
+				"method": "POST"
+			},
+			{
+				"id": "ae9fd366-3c03-40e5-9aa3-aa1746db1e4a",
+				"method": "POST"
+			},
+			{
+				"id": "71fc03d1-eb35-4fcc-a475-c39585d632d3",
+				"method": "GET"
+			},
+			{
+				"id": "65720401-4a68-466d-958e-419a79c06876",
+				"method": "PUT"
+			},
+			{
+				"id": "554ebab9-4009-4fbd-b9db-c0d573b7f7e3",
+				"method": "POST"
+			},
+			{
+				"id": "5dbbf7b1-69b5-44e0-b373-c6cb68423c9c",
+				"method": "GET"
+			},
+			{
+				"id": "4686f3e4-f03c-47f0-8954-2c4ffbdc42b7",
+				"method": "DELETE"
+			},
+			{
+				"id": "92b46de1-326f-453a-8ae1-d6fb25067dd6",
+				"method": "GET"
+			},
+			{
+				"id": "da2943ff-8d99-4986-a904-c1206a1c1327",
+				"method": "POST"
+			},
+			{
+				"id": "a939e7cb-72ff-4791-82a5-a9d1504af40a",
+				"method": "POST"
+			},
+			{
+				"id": "44e56640-f5a9-4bd5-8d03-a465a3bf9ee2",
+				"method": "POST"
+			},
+			{
+				"id": "cabd85a8-7338-4ce8-bee1-5592cb450239",
+				"method": "POST"
+			},
+			{
+				"id": "022d1b92-b761-4efd-8645-f572913c6221",
+				"method": "POST"
+			},
+			{
+				"id": "9aa846cb-0869-405e-921a-5d55e6f9a690",
+				"method": "POST"
+			},
+			{
+				"id": "c471019b-d1dc-42da-850e-a03f9421eb69",
+				"method": "POST"
+			},
+			{
+				"id": "3188516f-8631-4d8d-bc42-33f6eab00c4d",
+				"method": "GET"
+			},
+			{
+				"id": "988a4d74-e326-4dfb-a484-1fe5e56a5f7c",
+				"method": "GET"
+			}
+		]
+	}
+}
