@@ -36,4 +36,4 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run 'postman/collections/sqlverifier_auto.postman_test_run.json' -e 'sqlverifier_auto.postman_environment.json'
+          postman collection run 'postman/collections/sqlverifier_auto_4.1_4.2.json' -e 'sqlverifier_auto.postman_environment.json'
